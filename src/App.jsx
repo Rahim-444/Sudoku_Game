@@ -27,7 +27,7 @@ export const App = () => {
 
   const [solved, setSolved] = useState(false);
   const [SudokuBoard, setSudokuBoard] = useState(boardToSolve);
-  var solveSudoku = function (board) {
+  var solveSudoku = function(board) {
     for (let i = 0; i < board.length; i++) {
       for (let j = 0; j < board[0].length; j++) {
         if (board[i][j] === null) {
@@ -74,7 +74,7 @@ export const App = () => {
     const changed = (event) => {
       const updatedBoard = [...updatedboard];
       let value = +event.target.value;
-      isNaN(value) ? (value = null) : (value = value);
+      if (isNaN(value)) value = null;
       if (boardToSolve[index] !== null) {
         value = boardToSolve[index];
       }
