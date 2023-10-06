@@ -27,7 +27,7 @@ export const App = () => {
 
   const [solved, setSolved] = useState(false);
   const [SudokuBoard, setSudokuBoard] = useState(boardToSolve);
-  var solveSudoku = function(board) {
+  var solveSudoku = function (board) {
     for (let i = 0; i < board.length; i++) {
       for (let j = 0; j < board[0].length; j++) {
         if (board[i][j] === null) {
@@ -167,7 +167,7 @@ export const App = () => {
   }, []);
   return (
     <div className="App">
-      <h1 id="title">build</h1>
+      <h1 id="title">Test</h1>
       <h3 id="subtitle">
         Fill all the Sudoku boxes to win numbers range from (1-9)
       </h3>
